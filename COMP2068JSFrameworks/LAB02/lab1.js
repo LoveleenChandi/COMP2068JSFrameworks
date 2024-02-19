@@ -4,29 +4,48 @@ const prompt = require('prompt');
 // Function to generate computer's selection
 function generateComputerSelection() {
     const randomNumber = Math.random();
-    if (randomNumber < 0.34) {
+    
+
+    if (randomNumber >= 0 && randomNumber <= 0.34) {
         return "PAPER";
-    } else if (randomNumber < 0.67) {
+    } else if (randomNumber >= 0.35 && randomNumber <= 0.67) {
         return "SCISSORS";
-    } else {
+    } else if (randomNumber >= 0.68 && randomNumber <= 1.00) {
         return "ROCK";
     }
 }
 
+
 // Function to determine the winner
-function determineWinner(userSelection, computerSelection) {
-    if (userSelection === computerSelection) {
-        return "It's a tie";
-    } else if (
-        (userSelection === "ROCK" && computerSelection === "SCISSORS") ||
-        (userSelection === "PAPER" && computerSelection === "ROCK") ||
-        (userSelection === "SCISSORS" && computerSelection === "PAPER")
-    ) {
-        return "User Wins";
-    } else {
-        return "Computer Wins";
+function determineWinner (userSelection, computerSelection){
+    if (userSelection === computerSelection){
+        return "It's a tie!";
     }
+    if(userSelection === 'ROCK') {
+        if (computerChoice === 'PAPER'){
+            return "Computer Wins";
+                }else{
+                    return "User Wins";
+                }
+    }
+
+
+if (userSelection === 'PAPER') {
+    if (computerSelection === 'SCISSORS'){
+        return "Computer Wins";
+            }else{
+                return "User Wins";
+            }
 }
+
+if(userSelection === 'SCISSORS') {
+    if (computerSelection === 'ROCK'){
+        return "Computer Wins";
+            }else{
+                return "User Wins";
+            }
+}
+};
 
 // Prompting the user for input
 prompt.start();
