@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('my-musicians-website:server');
+var debug = require('debug')('petsname:server');
 var http = require('http');
 
 /**

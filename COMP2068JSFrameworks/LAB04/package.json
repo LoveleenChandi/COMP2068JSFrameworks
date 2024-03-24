@@ -1,9 +1,9 @@
 {
-  "name": "my-musicians-website",
+  "name": "singers",
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node app ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
