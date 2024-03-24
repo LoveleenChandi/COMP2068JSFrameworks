@@ -6,20 +6,20 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Singers name' });
 });
 
-router.get('/Jeon Jung-kook', function(req, res, next) {
-  res.render('Jeon Jung-kook');
+router.get('/jeonjungkook', function(req, res, next) {
+  res.render('jeonjungkook');
 });
 
-router.get('/ Kim Tae-hyung', function(req, res, next) {
-  res.render(' Kim Tae-hyung');
+router.get('/kimtaehyung', function(req, res, next) {
+  res.render('kimtaehyung');
 });
 
-router.get('/Nimrat Khaira', function(req, res, next) {
-  res.render('Nimrat Khaira');
+router.get('/nimratkhaira', function(req, res, next) {
+  res.render('nimratkhaira');
 });
 
-router.get('/Arijit Singh', function(req, res, next) {
-  res.render('Arijit Singh');
+router.get('/arijitsingh', function(req, res, next) {
+  res.render('arijitsingh');
 });
 
 module.exports = router;
